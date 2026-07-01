@@ -705,9 +705,9 @@
     .case-ov-title { font-size: clamp(24px, 7vw, 34px); }
     .case-title { font-size: clamp(28px, 9vw, 46px); }
   }
-  /* === FIX: Review/Service-Slider auf Touch/Mobil vertikal scrollbar lassen (kein pan-x-Trap) === */
+  /* === FIX: Review/Service-Slider auf Touch/Mobil - horizontal wischen UND vertikal die Seite scrollen === */
   @media (max-width: 1199px) {
-    .service-track { touch-action: pan-y; }
+    .service-track { touch-action: pan-x pan-y; }
   }
   /* === FIX: kleinster mobiler Breakpoint (<640) - Projekt-Tiles + About-Tile Titel auf h4-Groesse === */
   @media (max-width: 639px) {
@@ -1741,14 +1741,12 @@
           track.classList.add('mode-cont');
           slider._half = 0;
           slider._bounce = true;
-          slider._dir = 1;
-          track.scrollLeft = 0;
+          if (slider._dir === undefined) slider._dir = 1;
         } else {
           track.classList.remove('mode-cont');
           track.classList.add('mode-step');
           slider._half = 0;
           slider._bounce = false;
-          track.scrollLeft = 0;
         }
       } else {
         const doCont = continuous && origs.length;
