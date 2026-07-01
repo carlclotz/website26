@@ -705,6 +705,21 @@
     .case-ov-title { font-size: clamp(24px, 7vw, 34px); }
     .case-title { font-size: clamp(28px, 9vw, 46px); }
   }
+  /* === FIX: Review/Service-Slider auf Touch/Mobil vertikal scrollbar lassen (kein pan-x-Trap) === */
+  @media (max-width: 1199px) {
+    .service-track { touch-action: pan-y; }
+  }
+  /* === FIX: kleinster mobiler Breakpoint (<640) - Projekt-Tiles + About-Tile Titel auf h4-Groesse === */
+  @media (max-width: 639px) {
+    .block.is-case .block-text,
+    .block.is-decorative .block-text.txt-lead-sm { font-size: clamp(17px, 1.48vw, 38px) !important; line-height: 1.3 !important; }
+  }
+  /* === FIX: Case-Overlay-Subtitle mobil eine Stufe kleiner (h4 -> h5) === */
+  @media (max-width: 639px) {
+    .case-subtitle { font-size: clamp(15px, 1.25vw, 32px) !important; line-height: 1.34 !important; }
+  }
+  /* === SEO-Prerender: sichtbarer, echter Fallback-Content; JS entfernt ihn beim ersten Render === */
+  #seo-prerender { position: absolute; left: -99999px; top: 0; width: 1px; height: 1px; overflow: hidden; }
 </style>
 </head>
 <body class="playground">
@@ -758,6 +773,7 @@
 </div>
 
 
+<main id="seo-prerender" aria-hidden="true"><nav><a href="#projects">Projekte</a> <a href="#about">Über</a> <a href="#reviews">Referenzen</a> <a href="#contact">Kontakt</a></nav><section id="about"><h1>Brand Designer und Creative Technologist. Ich baue Markensysteme, über Strategie, Grafik, Web, Motion und Code hinweg.</h1><section><h3>What clients say about my work</h3><p>Voller generativer KI-Stack – Workflows, Automation, Video, Audioproduktion und LoRA-Training nach Industriestandards.</p><p>Figma – Design Systeme</p><p>Framer &amp; Webflow – Web-Umsetzung (Code/No-Code)</p><p>Illustrator – Grafik-Assets</p><p>Photoshop – Bild-Assets</p><p>InDesign – Druckproduktion</p><p>After Effects – Motion-Assets</p></section><section><h3>Agentur</h3><p>2 Jahre</p></section><section><h3>Freelance</h3><p>5 Jahre</p></section><section><h3>Akademisch</h3><p>B.A. Mediendesign FH Münster M.A. LABASAD Artificial Intelligence in Creative</p></section><section><h3>Fokus</h3><p>Brand Systeme – Ich baue Identitäten, die als System über jeden Touchpoint hinweg funktionieren, nicht nur als einzelnes Logo.</p><p>Digital, Web &amp; Motion – UX, UI, Web und bewegte Assets, gestaltet und ausgeliefert.</p><p>Konzept &amp; Strategie – Ich starte damit, was eine Marke sagen soll, und entscheide dann, wie sie es sagt.</p><p>Generative Content/KI – Workshops, Direction und kreative Arbeit, immer mit Urteilsvermögen über dem Output.</p></section></section><section id="projects"><h2>Projekte</h2><article><h2>Die Marke Demain entwickeln</h2><p class="sub">Du kaufst nicht die KI. Du kaufst den Geschmack dahinter.</p><p class="meta">Client: Demain an AI-first creative studio &middot; Year: 2026, Belgium &middot; Services: Brand, Web, Motion</p><p>Demain ist ein AI-first Creative-Content-Studio, vor allem in Fashion und Lifestyle, das menschliche Intuition mit generativer KI verbindet, um markengeführten Content zu liefern. Aus der belgischen Agentur BeContent hervorgegangen, läuft es heute als eigene internationale Marke. Die Kernaufgabe: die Haltung des Studios in ein Brand System übersetzen. Du kaufst keinen rohen generativen Content, du kaufst den Geschmack und die Erfahrung dahinter, geliefert über KI. Der Fokus liegt durchgehend darauf, die iterative, art-direktete Arbeit der Menschen hinter dem Content sichtbar zu machen.</p></article><article><h2>LABASAD x Kittl AI Brand Workshop</h2><p class="sub">Eine komplette Marke mit KI bauen, live im Kittl-Canvas.</p><p class="meta">Client: Kittl Brand Workshop &middot; Year: 2026 &middot; Services: Brand, Web, Motion</p><p>Als Ambassador für das Berliner Unternehmen Kittl gebe ich an der Barcelona School of Design (Labasad) einen Workshop dazu, wie man KI im Brand Design einsetzt. Statt nur darüber zu reden, baue ich live im Kittl-Canvas eine komplette Marke: von visuellen Elementen wie Logo und Typo bis zu Kampagnen und Social-Media-Video.</p></article><article><h2>Juliane Polak Web Design</h2><p class="sub">Showcase-Website für Juliane Polak</p><p class="meta">Client: Juliane Polak &middot; Year: 2026 &middot; Services: Brand, Web, Motion</p><p>Eine Website für Juliane Polak, live unter julianepolak.de. Das Konzept habe ich gemeinsam mit Tobias Kaizer entwickelt und die Seite gebaut.</p></article><article><h2>M.A. Final Project in Generative AI</h2><p class="sub">Neue Wege im Branding erkunden</p><p class="meta">Client: Research Project &middot; Year: 2026 &middot; Services: Brand, Web, Motion</p><p>ALMA ist ein Konzeptalbum, das im Browser zu einer lebendigen Marke wird. Eine vollständige visuelle Identität, interaktiv gemacht durch Webcam-ASCII, Hand-Tracking und audioreaktive Visuals. Die Musik ist ohne KI komponiert, die interaktive Ebene ohne sie unmöglich.</p></article></section><section id="reviews"><h2>Referenzen</h2><blockquote><p>For the brand design of our creative AI-studio DEMAIN, I started working with Mathis. He listens, asks sharp questions, and isn’t afraid to push back. More than once, he made me rethink an idea—and it came back stronger.</p><p>I challenged his work; he challenged mine. Somewhere in that back-and-forth, the project turned into something great and unique! This wasn’t a brief and execution. It was a real collaboration! If you get the chance to work with Mathis, take it.</p><cite>Lizzie van Wassenhoven, BeContent</cite></blockquote><blockquote><p>Mathis is an extraordinarily talented, structured and smart brand designer, who puts a lot of deep thought in his work and comes up with great solutions that are both stragetically and creatively excellent and well executed. It is a joy working with him.</p><cite>Konrad Wielandt, Wielandt GmbH</cite></blockquote><blockquote><p>The first time I worked with Mathis was when I needed support on a website project on short notice. He responded very quickly and pragmatically, allowing us to not only meet our tight deadline but also achieve a really great result.</p><p>Particularly helpful is his combination of strong design skills and sound AI expertise, which enables fast, thoughtful, and efficient execution. Since then, we have collaborated on several smaller projects together.</p><p>Mathis has always been highly reliable, understands what needs to be done very quickly, and consistently delivers great results. Working with him is straightforward and a lot of fun.</p><cite>Leona Turner, NaroIQ</cite></blockquote><blockquote><p>Mathis x DEMAIN studio was a match made in heaven. Mathis designed our website and branding.  Since DEMAIN is a new AI studio, it had to be top-notch. And he fully lived up to those expectations. Mathis is not only a fantastic creative but also very meticulous. Thank you, Mathis, for the wonderful collaboration.</p><cite>Karen Vandenbosche, BeContent</cite></blockquote><blockquote><p>Mathis hat unsere Marke erschaffen und kontinuierlich anhand unserer Wünsche weitergebracht. Er schafft es immer wieder, unsere Vorstellungen zu nailen.</p><p>Die Gespräche und Ideen sind top, er hat eine super Auffassungsgabe und schafft es, auch implizite Wünsche in eine Identität zu giessen.</p><p>Auch die Arbeitsmoral ist einwandfrei, selbst kurzfristig gesetzte Deadlines werden eingehalten. Ich empfehle eine Zusammenarbeit mit Mathis sehr!</p><cite>Karen Vandenbosche, BeContent</cite></blockquote></section><section><h2>Kunden</h2><ul><li>MotoMoto</li><li>Wielandt GmbH</li><li>Port-Neo</li><li>Demain</li><li>BeContent</li></ul></section><footer id="contact"><h2>Kontakt</h2><ul><li><a href="mailto:work@mathismiener.com">Mail</a></li><li><a href="tel:01622160275">Telefon</a></li><li><a href="https://www.instagram.com/mathismiener/">Instagram</a></li><li><a href="https://www.linkedin.com/in/mathis-miener-90b1aa28a/">LinkedIn</a></li></ul></footer></main>
 <div class="content">
   <div class="grid" id="grid"></div>
 </div>
@@ -1040,15 +1056,15 @@
 
   // ====== SEO / META (fuer die Live-Datei ausfuellen) ======
   const SITE_META = {
-    title: 'Mathis Miener — Creative Direction',
-    description: 'Creative Direction. Markensysteme mit Haltung, AI mit Augenmass, audiovisuell und interaktiv.',
-    url: 'https://example.com',            // deine Domain
-    image: 'media/og.jpg',                  // 1200x630 Vorschaubild fuer Social
+    title: 'Mathis Miener - Brand Designer & Creative Technologist',
+    description: 'Mathis Miener ist Brand Designer und Creative Technologist in Berlin. Markensysteme zwischen Strategie, Grafik, Web, Motion und KI, mit Haltung statt nur Output.',
+    url: 'https://mathismiener.com',        // deine Domain
+    image: 'media/og.png',                  // 1200x630 Vorschaubild fuer Social
     locale: 'de_DE',
-    favicon: 'media/favicon.png',
+    favicon: 'media/icons/favicon-32.png',
     gaId: '',                               // Google Analytics 4, z.B. 'G-XXXXXXXXXX'
     gscVerify: '',                          // Google Search Console Meta-Token
-    person: { name: 'Mathis Miener', jobTitle: 'Creative Director', sameAs: [] }
+    person: { name: 'Mathis Miener', jobTitle: 'Brand Designer & Creative Technologist', sameAs: [] }
   };
 
   function colsForWidth(w) { return w >= 1200 ? 8 : w >= 810 ? 6 : 4; }
@@ -1342,6 +1358,7 @@
     const blocks = getBlocks();
     bpReadout.innerHTML = cols + ' cols<span class="bp">' + bpName(currentBp) + '</span>';
     clearLottie();
+    { const _seo = document.getElementById('seo-prerender'); if (_seo) _seo.remove(); }
     grid.innerHTML = '';
     let introTitlesPlaced = false;
     blocks.forEach((b, i) => {
@@ -1719,11 +1736,20 @@
       // Reviews: einfacher Bounce-Scroll auf allen Breakpoints, keine Klone, kein Endless-Loop.
       // Services: Desktop kontinuierlich (mit Klonen fuer Endlos-Effekt), sonst Step mit Auto-Advance.
       if (isReview) {
-        track.classList.remove('mode-step');
-        track.classList.add('mode-cont');
-        slider._half = 0;
-        slider._bounce = true;
-        if (slider._dir === undefined) slider._dir = 1;
+        if (continuous) {
+          track.classList.remove('mode-step');
+          track.classList.add('mode-cont');
+          slider._half = 0;
+          slider._bounce = true;
+          slider._dir = 1;
+          track.scrollLeft = 0;
+        } else {
+          track.classList.remove('mode-cont');
+          track.classList.add('mode-step');
+          slider._half = 0;
+          slider._bounce = false;
+          track.scrollLeft = 0;
+        }
       } else {
         const doCont = continuous && origs.length;
         if (doCont) {
