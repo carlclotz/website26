@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutz - Mathis Miener</title>
+<meta name="robots" content="noindex,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Inter+Tight:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg:#000; --fg:#fff; --text-2:#a3a3a3; --border:#2e2e2e; }
+body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; line-height: 1.6; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 96px 24px 120px; }
+.back { display:inline-flex; align-items:center; gap:8px; color: var(--text-2); text-decoration:none; font-size:14px; margin-bottom:48px; }
+.back:hover { color: var(--fg); }
+.langToggle { position:fixed; top:24px; right:24px; display:flex; gap:8px; border:1px solid var(--border); border-radius:999px; padding:4px; }
+.langToggle button { background:none; border:none; color:var(--text-2); font-family:'Inter', sans-serif; font-size:13px; padding:6px 14px; border-radius:999px; cursor:pointer; }
+.langToggle button.active { background:#fff; color:#000; }
+h1 { font-family:'Inter Tight', sans-serif; font-weight:500; font-size: clamp(32px, 5vw, 48px); margin-bottom: 40px; }
+.body-text { font-size:15px; color: var(--text-2); white-space: pre-line; }
+.lang-block { display:none; }
+.lang-block.active { display:block; }
+</style>
+</head>
+<body>
+<div class="langToggle">
+  <button data-lang="de" onclick="setLang('de')">DE</button>
+  <button data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Mathis Miener</a>
+  <div class="lang-block" data-lang="de">
+    <h1>Datenschutz</h1>
+    <div class="body-text">Datenschutzerklärung
+
+1. Verantwortlicher
+Mathis Miener
+Elbestraße 39, 12045 Berlin
+work@mathismiener.com
+
+2. Hosting
+Diese Website wird über Cloudflare Pages gehostet (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA). Beim Aufruf der Website werden automatisch technische Daten wie IP-Adresse, Datum und Uhrzeit der Anfrage, übertragene Datenmenge und der anfragende Browser an Cloudflare als Auftragsverarbeiter übermittelt und in Server-Logfiles gespeichert. Diese Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien Bereitstellung der Website).
+
+3. Cookies und Tracking
+Diese Website setzt aktuell keine Tracking- oder Marketing-Cookies ein. Sollte sich das ändern (zum Beispiel durch den Einsatz von Webanalyse-Tools), wird diese Erklärung entsprechend aktualisiert und, falls erforderlich, eine Einwilligung über ein Cookie-Banner eingeholt.
+
+4. Kontaktaufnahme
+Wenn du mich per E-Mail kontaktierst, werden deine Angaben zur Bearbeitung der Anfrage und für mögliche Anschlussfragen bei mir gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern die Anfrage einer Vertragsanbahnung dient, andernfalls Art. 6 Abs. 1 lit. f DSGVO.
+
+5. Deine Rechte
+Du hast jederzeit das Recht auf Auskunft über deine bei mir gespeicherten personenbezogenen Daten, deren Herkunft, Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen kannst du dich jederzeit unter der im Impressum angegebenen Adresse an mich wenden. Außerdem steht dir ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
+
+6. Änderung dieser Datenschutzerklärung
+Ich behalte mir vor, diese Datenschutzerklärung anzupassen, damit sie stets aktuellen rechtlichen Anforderungen entspricht oder um Änderungen meiner Leistungen umzusetzen.</div>
+  </div>
+  <div class="lang-block" data-lang="en">
+    <h1>Privacy Policy</h1>
+    <div class="body-text">Privacy Policy
+
+1. Controller
+Mathis Miener
+Elbestraße 39, 12045 Berlin, Germany
+work@mathismiener.com
+
+2. Hosting
+This website is hosted via Cloudflare Pages (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA). When you visit the site, technical data such as IP address, date and time of the request, amount of data transferred, and the requesting browser are automatically transmitted to Cloudflare as processor and stored in server log files. This processing is based on Art. 6 (1) lit. f GDPR (legitimate interest in the technically error-free provision of the website).
+
+3. Cookies and tracking
+This website currently does not use tracking or marketing cookies. Should this change (for example through the use of web analytics tools), this policy will be updated accordingly and, where required, consent will be obtained via a cookie banner.
+
+4. Contact
+If you contact me by email, your details will be stored by me in order to process your request and in case of follow-up questions. The legal basis is Art. 6 (1) lit. b GDPR if the inquiry relates to the initiation of a contract, otherwise Art. 6 (1) lit. f GDPR.
+
+5. Your rights
+You have the right, at any time, to request information about your personal data stored by me, its origin, recipients, and the purpose of the processing, as well as the right to rectification, restriction, or deletion of this data. For this and any further questions, you may contact me at any time using the address given in the imprint. You also have the right to lodge a complaint with the competent supervisory authority.
+
+6. Changes to this privacy policy
+I reserve the right to amend this privacy policy to ensure it always complies with current legal requirements or to reflect changes to my services.
+
+Note: This English version is provided for convenience only. The German version is legally binding.</div>
+  </div>
+</div>
+<script>
+function setLang(l){
+  document.querySelectorAll('.lang-block').forEach(function(el){ el.classList.toggle('active', el.dataset.lang===l); });
+  document.querySelectorAll('.langToggle button').forEach(function(b){ b.classList.toggle('active', b.dataset.lang===l); });
+  document.documentElement.lang = l;
+  try { localStorage.setItem('mm_legal_lang', l); } catch(e){}
+}
+(function(){
+  var saved = 'de';
+  try { saved = localStorage.getItem('mm_legal_lang') || 'de'; } catch(e){}
+  setLang(saved);
+})();
+</script>
+</body>
+</html>

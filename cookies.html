@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cookies - Mathis Miener</title>
+<meta name="robots" content="noindex,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Inter+Tight:wght@100..900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --bg:#000; --fg:#fff; --text-2:#a3a3a3; --border:#2e2e2e; }
+body { background: var(--bg); color: var(--fg); font-family: 'Inter', sans-serif; line-height: 1.6; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 96px 24px 120px; }
+.back { display:inline-flex; align-items:center; gap:8px; color: var(--text-2); text-decoration:none; font-size:14px; margin-bottom:48px; }
+.back:hover { color: var(--fg); }
+.langToggle { position:fixed; top:24px; right:24px; display:flex; gap:8px; border:1px solid var(--border); border-radius:999px; padding:4px; }
+.langToggle button { background:none; border:none; color:var(--text-2); font-family:'Inter', sans-serif; font-size:13px; padding:6px 14px; border-radius:999px; cursor:pointer; }
+.langToggle button.active { background:#fff; color:#000; }
+h1 { font-family:'Inter Tight', sans-serif; font-weight:500; font-size: clamp(32px, 5vw, 48px); margin-bottom: 40px; }
+.body-text { font-size:15px; color: var(--text-2); white-space: pre-line; }
+.lang-block { display:none; }
+.lang-block.active { display:block; }
+</style>
+</head>
+<body>
+<div class="langToggle">
+  <button data-lang="de" onclick="setLang('de')">DE</button>
+  <button data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Mathis Miener</a>
+  <div class="lang-block" data-lang="de">
+    <h1>Cookies</h1>
+    <div class="body-text">Cookie-Hinweis
+
+Diese Website verwendet aktuell keine Cookies zu Tracking- oder Marketingzwecken. Es werden ausschließlich technisch notwendige Daten verarbeitet, die für die Auslieferung der Seite über Cloudflare Pages erforderlich sind (siehe Datenschutzerklärung, Abschnitt Hosting).
+
+Sollten künftig Analyse- oder Marketing-Tools eingesetzt werden, die Cookies setzen, wird an dieser Stelle ein Cookie-Banner eingeblendet, über das du deine Einwilligung erteilen oder ablehnen kannst. Diese Seite wird dann entsprechend aktualisiert.</div>
+  </div>
+  <div class="lang-block" data-lang="en">
+    <h1>Cookies</h1>
+    <div class="body-text">Cookie Notice
+
+This website currently does not use cookies for tracking or marketing purposes. Only technically necessary data is processed, which is required to deliver the site via Cloudflare Pages (see Privacy Policy, Hosting section).
+
+Should analytics or marketing tools that set cookies be introduced in the future, a cookie banner will be shown here, allowing you to grant or decline consent. This page will be updated accordingly.
+
+Note: This English version is provided for convenience only. The German version is legally binding.</div>
+  </div>
+</div>
+<script>
+function setLang(l){
+  document.querySelectorAll('.lang-block').forEach(function(el){ el.classList.toggle('active', el.dataset.lang===l); });
+  document.querySelectorAll('.langToggle button').forEach(function(b){ b.classList.toggle('active', b.dataset.lang===l); });
+  document.documentElement.lang = l;
+  try { localStorage.setItem('mm_legal_lang', l); } catch(e){}
+}
+(function(){
+  var saved = 'de';
+  try { saved = localStorage.getItem('mm_legal_lang') || 'de'; } catch(e){}
+  setLang(saved);
+})();
+</script>
+</body>
+</html>
